@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- React scripts sans node or webpack -->
+    <script
+      type="application/javascript"
+      src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"
+    ></script>
+
+    <!-- load the app component-->
+    <script src="/scripts/components/App.js"></script>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/App.css">
+    <title>React App</title>
+  </head>
+
+  <body>
+    <div id="Root">
+      React Application Root
+    </div>
+  </body>
+  <script>
+    /**
+     * app Element is equivilant to <App logo="/images/logo512.png" /> in jsx
+     */
+    const appElement = React.createElement(App, {
+      logo: "/images/logo512.png"
+    });
+    ReactDOM.render(appElement, document.getElementById("Root"));
+  </script>
+</html>
